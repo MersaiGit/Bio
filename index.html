@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mersai BIO</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #000;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #fff;
+      flex-direction: column; /* Вертикальное расположение контента */
+    }
+
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      filter: blur(8px);
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px 40px;
+      border-radius: 30px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+      border-radius: 30px;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      font-weight: 900;
+      position: relative;
+      top: -10px;
+    }
+
+    .welcome-text {
+      font-size: 1em;
+      margin-bottom: 20px; /* Отступ между текстом и кнопками */
+      color: #fff;
+      max-width: 500px; /* Максимальная ширина текста */
+      margin: 0 auto; /* Центрирование текста */
+    }
+
+    .small-platform {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 20px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      position: relative;
+      z-index: 1;
+      max-width: 600px; /* Ширина платформы */
+      margin: 20px auto 0 auto;
+      display: flex; /* Для горизонтального расположения */
+      flex-direction: column; /* Вертикальное расположение элементов */
+      align-items: center; /* Выравнивание по центру */
+    }
+
+    .platform-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 10px; /* Отступ между заголовком и кнопками */
+      text-align: center;
+    }
+
+    .contact-button {
+      background-color: #000; /* Черный фон кнопок */
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      color: #fff; /* Белый текст на кнопках */
+      box-shadow: 0 0 5px rgba(192, 192, 192, 0.5), 0 0 10px rgba(192, 192, 192, 0.5); /* Неоновая обводка */
+      flex: 1; /* Занимать равное пространство */
+      box-sizing: border-box;
+      margin: 5px; /* Отступ между кнопками */
+    }
+
+    .contact-button:hover {
+      background-color: #333; /* Темно-серый при наведении */
+      box-shadow: 0 0 10px rgba(192, 192, 192, 0.7), 0 0 20px rgba(192, 192, 192, 0.7); /* Увеличение неоновой обводки при наведении */
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <video autoplay loop muted>
+      <source src="fon.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="content">
+    <img src="ava.jpg" alt="Mersai" class="avatar glow-animation">
+    <h2>Mersai</h2>
+    <div class="welcome-text">
+      Привет, это сайт-био на котором размещена вся необходимая информация.<br><br>
+      Для более быстрого и точного ответа сформулируйте свою мысль в одном сообщении, не нужно разбивать его на несколько частей.<br><br>
+      Спасибо за внимание.
+    </div>
+  </div>
+
+  <div class="small-platform">
+    <div class="platform-title">Связь со мной</div>
+    <div style="display: flex; gap: 10px;">
+      <a href="https://t.me/avangardev" target="_blank" class="contact-button">Telegram</a>
+      <a href="https://www.vk.com/mayzawa" target="_blank" class="contact-button">VK</a>
+      <a href="https://forum.blackrussia.online/members/mersai_avangardev-%E2%9B%A7.1836733/" target="_blank" class="contact-button">Forum</a>
+    </div>
+  </div>
+</body>
+</html>
